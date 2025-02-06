@@ -5,7 +5,6 @@ import { Circle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Particles } from "@/components/ui/particles"
-import { GlowEffect } from "@/components/ui/glow-effect";
 import { ArrowRight } from "lucide-react";
 import { StarBorder } from "@/components/ui/star-border"
 
