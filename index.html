@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal - Your Gateway to Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet">
+    <script src="animations.js" defer></script>
+</head>
+<body class="bg-black text-white">
+    <div class="glow-container">
+        <nav class="fixed w-full z-50">
+            <div class="nav-container flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="logo.svg" alt="Portal Logo" class="w-8 h-8 mr-6" />
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#about" class="hover:text-blue-400 transition-colors">About Us</a>
+                    <a href="#features" class="hover:text-blue-400 transition-colors">Features</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="nav-btn px-4 py-2">Log in</button>
+                    <button class="nav-btn-primary px-4 py-2">Sign Up</button>
+                </div>
+            </div>
+        </nav>
+
+        <header class="min-h-screen flex items-center justify-center relative overflow-hidden">
+            <Particles
+                className="absolute inset-0"
+                quantity={100}
+                ease={80}
+                color="#0095ff"
+                refresh={false}
+            />
+            <div class="text-center z-10" id="welcome-section">
+                <h1 class="text-6xl font-bold mb-6 glow-text">Welcome to Portal</h1>
+                <p class="text-xl mb-8">Your gateway to infinite possibilities</p>
+                <button class="download-btn px-8 py-4 rounded-lg text-lg font-semibold" id="explore-btn">
+                    Explore
+                </button>
+            </div>
+
+            <div class="grid-blocks hidden opacity-0" id="blocks-grid">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+                    <!-- FAQ Block -->
+                    <div class="feature-block">
+                        <div class="block-content">
+                            <h3 class="text-2xl font-bold mb-3">FAQ</h3>
+                            <p class="text-gray-300 mb-4">Find answers to commonly asked questions about Portal and its features.</p>
+                            <img src="faq-image.jpg" alt="FAQ" class="block-image mb-4">
+                            <button class="block-btn">Learn More</button>
+                        </div>
+                    </div>
+
+                    <!-- Create Source Block -->
+                    <div class="feature-block">
+                        <div class="block-content">
+                            <h3 class="text-2xl font-bold mb-3">Create a Source</h3>
+                            <p class="text-gray-300 mb-4">Start creating your own source and share it with the community.</p>
+                            <img src="create-source.jpg" alt="Create Source" class="block-image mb-4">
+                            <button class="block-btn">Get Started</button>
+                        </div>
+                    </div>
+
+                    <!-- Download Hydra Block -->
+                    <div class="feature-block">
+                        <div class="block-content">
+                            <h3 class="text-2xl font-bold mb-3">Download Hydra</h3>
+                            <p class="text-gray-300 mb-4">Get the latest version of Hydra client for the best experience.</p>
+                            <img src="hydra.jpg" alt="Hydra" class="block-image mb-4">
+                            <button class="block-btn">Download</button>
+                        </div>
+                    </div>
+
+                    <!-- Guides Block -->
+                    <div class="feature-block">
+                        <div class="block-content">
+                            <h3 class="text-2xl font-bold mb-3">Guides</h3>
+                            <p class="text-gray-300 mb-4">Explore comprehensive guides to master Portal features.</p>
+                            <img src="guides.jpg" alt="Guides" class="block-image mb-4">
+                            <button class="block-btn">View Guides</button>
+                        </div>
+                    </div>
+
+                    <!-- Search Source Block -->
+                    <div class="feature-block">
+                        <div class="block-content">
+                            <h3 class="text-2xl font-bold mb-3">Search for Source</h3>
+                            <p class="text-gray-300 mb-4">Find the perfect source for your needs from our vast collection.</p>
+                            <img src="search.jpg" alt="Search" class="block-image mb-4">
+                            <button class="block-btn">Search Now</button>
+                        </div>
+                    </div>
+
+                    <!-- Leaderboard Block -->
+                    <div class="feature-block">
+                        <div class="block-content">
+                            <h3 class="text-2xl font-bold mb-3">Leaderboard</h3>
+                            <p class="text-gray-300 mb-4">Check out top-rated sources and contributors.</p>
+                            <img src="leaderboard.jpg" alt="Leaderboard" class="block-image mb-4">
+                            <button class="block-btn">View Rankings</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container mx-auto px-4 py-16">
+            <section id="sources" class="mb-20">
+                <h2 class="text-4xl font-bold mb-8 glow-text">Sources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Source cards will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="reviews" class="mb-20">
+                <h2 class="text-4xl font-bold mb-8 glow-text">Latest Reviews</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Review cards will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="guides" class="mb-20">
+                <h2 class="text-4xl font-bold mb-8 glow-text">Guides</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Guide cards will be dynamically added here -->
+                </div>
+            </section>
+
+            <section id="faq" class="mb-20">
+                <h2 class="text-4xl font-bold mb-8 glow-text">FAQ</h2>
+                <div class="space-y-6">
+                    <!-- FAQ items will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-black/30 backdrop-blur-lg py-8">
+            <div class="container mx-auto px-4 text-center">
+                <p>&copy; 2024 Portal. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 
